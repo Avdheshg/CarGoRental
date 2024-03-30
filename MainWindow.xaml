@@ -1,0 +1,33 @@
+﻿<Window x:Class="CarGoRental.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        xmlns:viewmodels="clr-namespace:CarGoRental.ViewModel"
+        xmlns:views="clr-namespace:CarGoRental.Views"
+        
+        xmlns:local="clr-namespace:CarGoRental"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <ContentControl Content="{Binding CurrentViewModel}">
+        <ContentControl.Resources>
+            <DataTemplate DataType="{x:Type viewmodels:HomeViewModel}">
+                <views:HomeView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:AccountTypeViewModel}">
+                <views:UserOccupation />
+            </DataTemplate>
+        </ContentControl.Resources>
+    </ContentControl>
+    
+    
+</Window>
+
+    
+<!--
+
+    INotifyPropertyChanged
+    
+-->
