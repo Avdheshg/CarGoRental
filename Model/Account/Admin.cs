@@ -18,8 +18,8 @@ namespace CarGoRental.Model.Account
 */
     public class Admin : Account
     {
-        public Admin(string email, string userName, string password, Contact contactDetails)
-            : base (email, userName, password, AccountType.ADMIN, contactDetails)
+        public Admin(string fullName, string email, string password, string phone, string address)
+            : base(fullName, email, password, phone, address)
         {
             
         }

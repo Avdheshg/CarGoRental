@@ -1,5 +1,6 @@
 ﻿using CarGoRental.Commands;
 using CarGoRental.Stores;
+using CarGoRental.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,8 @@ namespace CarGoRental.ViewModel
 {
     public class HomeViewModel : ViewModelBase
     {
-        public string Message => "Please sign in";
+
+        public string Message => "Welcome";
 
         public ICommand NavigateAccountTypeCommand { get; }
 

@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CarGoRental.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="1000" d:DesignWidth="1000">
     <Grid>
     <Grid Background="AliceBlue">
         
@@ -13,6 +13,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        
          <!--Header--> 
         <Grid Grid.Row="0" Margin="0,20,0,0">
             <Grid.ColumnDefinitions>
@@ -20,7 +21,7 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
-             <!--Page Title--> 
+             <!--Page Title     fullname, email, pass,ph,address--> 
             <TextBlock Grid.Column="0" Text="Create an Account" HorizontalAlignment="Center" FontSize="24"/>
 
         </Grid>
@@ -32,28 +33,42 @@
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
-            
-             <!--Email Field--> 
+
+            <!--Full Name Field-->
             <StackPanel Grid.Row="0" Margin="0,20,0,0">
-                <TextBlock Text="Email" FontSize="18" Foreground="#707070"/>
-                <TextBox Text="avdeshg804@gmail.com" FontSize="18" Margin="0,5,0,0" Height="40"/>
+                <TextBlock Text="Full Name" FontSize="18" Foreground="#707070"/>
+                <TextBox x:Name="FullName" Text="Avdhesh Gautam" FontSize="18" Margin="0,5,0,0" Height="80"/>
             </StackPanel>
 
-             <!--Username Field--> 
-            <StackPanel Grid.Row="1"  Margin="0,20,0,0">
-                <TextBlock Text="Username" FontSize="18" Foreground="#707070"/>
-                <TextBox Text="avdeshg" FontSize="18" Margin="0,5,0,0" Height="40"/>
+           <!--Email Field--> 
+            <StackPanel Grid.Row="1" Margin="0,20,0,0">
+                <TextBlock Text="Email" FontSize="18" Foreground="#707070"/>
+                <TextBox x:Name="Email" Text="avdeshg804@gmail.com" FontSize="18" Margin="0,5,0,0" Height="40"/>
             </StackPanel>
 
              <!--Password Field--> 
             <StackPanel Grid.Row="2"  Margin="0,20,0,0">
                 <TextBlock Text="Password" FontSize="18" Foreground="#707070"/>
-                <PasswordBox Password="Avdhesh@1" FontSize="18" Margin="0,5,0,0" Height="40"/>
+                <PasswordBox x:Name="Password" Password="Avdhesh@1" FontSize="18" Margin="0,5,0,0" Height="40"/>
             </StackPanel>
 
-             <!--Register Button--> 
-            <Button  Grid.Row="3"  Content="Register" Command="{Binding NavigateAccountTypeCommand}" HorizontalAlignment="Center" Margin="0,20,0,0" Width="120" Height="40" Background="#1FB25A" Foreground="White" FontSize="18"/>
+            <!--Phone Field-->
+            <StackPanel Grid.Row="3"  Margin="0,20,0,0">
+                <TextBlock Text="Phone" FontSize="18" Foreground="#707070"/>
+                <TextBox x:Name="Phone" Text="6395864632" FontSize="18" Margin="0,5,0,0" Height="40"/>
+            </StackPanel>
+
+            <!--Address Field-->
+            <StackPanel Grid.Row="4"  Margin="0,20,0,0">
+                <TextBlock Text="Address" FontSize="18" Foreground="#707070"/>
+                <TextBox x:Name="Address" Text="Secror 22, Gurgaon" FontSize="18" Margin="0,5,0,0" Height="40"/>
+            </StackPanel>
+
+                <!--Register Button--> 
+            <Button  Grid.Row="5"  Content="Register" Command="{Binding NavigateAccountTypeCommand}" HorizontalAlignment="Center" Margin="0,20,0,0" Width="120" Height="40" Background="#1FB25A" Foreground="White" FontSize="18"/>
         </Grid>
     </Grid>
 </Grid>

@@ -12,8 +12,8 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <Button Grid.Row="0" Margin="10" Content="Driver" Background="Green"/>
-        <Button Grid.Row="1" Content="Passenger" Background="Green"/>
+        <Button Command="{Binding NavigateCreateAccountCommand}" Grid.Row="0" Content="User" Background="Green"/>
+        <Button Grid.Row="1" Margin="10" Content="Driver" Background="Green"/>
         
 
     </Grid>

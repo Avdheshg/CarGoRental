@@ -1,4 +1,5 @@
-﻿using CarGoRental.Model.Vehicle;
+﻿using CarGoRental.Model.Common;
+using CarGoRental.Model.Vehicle;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,8 +14,8 @@ namespace CarGoRental.Model.Account
         public HireableVehicle DriverVehicle { get; }
         public DriverStatusType DriverStatusType { get; set; }
 
-        public Driver(HireableVehicle driverVehicle, string email, string userName, string password, Contact contactDetails, string licenseNumber, DateTime issueDate, DateTime expiryDate, string issuedAtPlace, string issuedInState, string issuedInCountry, LicenseType licenseType) 
-            : base(email, userName, password, AccountType.ADMIN, contactDetails)
+        public Driver(HireableVehicle driverVehicle, string fullName, string email, string password, string phone, string address, string licenseNumber, DateTime issueDate, DateTime expiryDate, string issuedAtPlace, string issuedInState, string issuedInCountry, LicenseType licenseType) 
+            : base(fullName, email, password, phone, address)
         {
             DriverVehicle = driverVehicle;
             DriverStatusType = DriverStatusType.AVAILABLE;

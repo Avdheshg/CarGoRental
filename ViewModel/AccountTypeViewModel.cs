@@ -17,7 +17,8 @@ namespace CarGoRental.ViewModel
 
         public AccountTypeViewModel(NavigationStore navigationStore)
         {
-            NavigateHomeCommand = new NavigateHomeCommand(navigationStore);
+            // NavigateHomeCommand = new NavigateHomeCommand(navigationStore);
+            NavigateHomeCommand = new NavigateCreateAccountCommand(navigationStore);
         }
 
 

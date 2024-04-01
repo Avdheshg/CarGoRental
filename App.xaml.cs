@@ -14,6 +14,7 @@ namespace CarGoRental
         {
             NavigationStore navigationStore = new NavigationStore();
 
+            //navigationStore.CurrentViewModel = new AccountTypeViewModel(navigationStore);
             navigationStore.CurrentViewModel = new HomeViewModel(navigationStore);
 
             MainWindow = new MainWindow()
